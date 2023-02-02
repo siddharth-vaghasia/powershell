@@ -86,8 +86,7 @@
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Adds an item to a navigation element</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Add-PnPNavigationNode -Location &lt;NavigationType&gt; -Title &lt;String&gt; [-Url &lt;String&gt;] [-Parent &lt;Int32&gt;] [-First]
- [-External] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+<pre><code class="lang-powershell">Add-PnPNavigationNode -Location &lt;NavigationType&gt; -Title &lt;String&gt; [-Url &lt;String&gt;] [-Parent &lt;Int32&gt;] [-First] [-External] [-AudienceIds &lt;Guid[]&gt;] [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
 <p>Adds a menu item to either the quicklaunch, top navigation, search navigation or the footer</p>
@@ -113,7 +112,7 @@
 </code></pre>
 <p>Adds a navigation node to the quicklaunch. The navigation node will have the title &quot;Wiki&quot; and will link to Wiki library on the selected Web.</p>
 <h3 id="example-6">EXAMPLE 6</h3>
-<pre><code class="lang-powershell">Add-PnPNavigationNode -Title &quot;Label&quot; -Location &quot;TopNavigationBar&quot; -Url &quot;http://linkless.header&quot;
+<pre><code class="lang-powershell">Add-PnPNavigationNode -Title &quot;Label&quot; -Location &quot;TopNavigationBar&quot; -Url &quot;http://linkless.header/&quot;
 </code></pre>
 <p>Adds a navigation node to the top navigation bar. The navigation node will be created as a label.</p>
 <h2 id="parameters">PARAMETERS</h2>
@@ -195,6 +194,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-audienceids">-AudienceIds</h3>
+<p>The Guids of the groups to which the navigation node should be visible. Leave empty to make the node visible to all users.</p>
+<pre><code class="lang-yaml">Type: Guid array
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
 <p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
@@ -223,5 +233,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

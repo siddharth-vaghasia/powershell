@@ -84,7 +84,10 @@
                     <h1 id="request-pnpsyntexclassifyandextract">Request-PnPSyntexClassifyAndExtract</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>Requests for a file, folder or all files in a library to be classified and extracted via the published SharePoint Syntex models on the libraries hosting the files.</p>
+<p>Requests for a file, folder or all files in a library to be classified and extracted via the published Microsoft Syntex models on the libraries hosting the files.</p>
+<a href="https://pnp.github.io/powershell/articles/batching.html">
+<img src="https://raw.githubusercontent.com/pnp/powershell/gh-pages/images/batching/Batching.png" alt="Supports Batching">
+</a>
 <h2 id="syntax">SYNTAX</h2>
 <h3 id="file">File</h3>
 <pre><code class="lang-powershell">Request-PnPSyntexClassifyAndExtract -FileUrl &lt;string&gt; [-Batch &lt;PnPBatch&gt;]  [-Connection &lt;PnPConnection&gt;] 
@@ -99,8 +102,8 @@
 [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>This command requests for all files in a library, folder or individual files to be classified and extracted via the published SharePoint Syntex models on the libraries hosting the files. When using with the <code>OffPeak</code> switch then the files are send to the off peak Syntex content processing queue, this way there's no need to enumerate all files in the library and submit them to the regular queue. When using the <code>Force</code> switch without setting OffPeak then all files are enumerated and sent to the regular queue, regardless of whether they were processed in the past.</p>
-<p>When the list contains more than 5000 files or when using the folder parameter the cmdlet will use the off peak SharePoint Syntex queue.</p>
+<p>This command requests for all files in a library, folder or individual files to be classified and extracted via the published Syntex models on the libraries hosting the files. When using with the <code>OffPeak</code> switch then the files are send to the off peak Syntex document processing queue, this way there's no need to enumerate all files in the library and submit them to the regular queue. When using the <code>Force</code> switch without setting OffPeak then all files are enumerated and sent to the regular queue, regardless of whether they were processed in the past.</p>
+<p>When the list contains more than 5000 files or when using the folder parameter the cmdlet will use the off peak Syntex queue.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Request-PnPSyntexClassifyAndExtract -FileUrl &quot;/sites/finance/invoices/invoice1.docx&quot; 
@@ -127,7 +130,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-list">-List</h3>
-<p>The name or list holding the files to classify and extract</p>
+<p>The name or list holding the files to classify and extract.</p>
 <pre><code class="lang-yaml">Type: ListPipeBind
 Parameter Sets: List
 
@@ -222,5 +225,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

@@ -86,26 +86,63 @@
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Returns the Tenant ID</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Get-PnPTenantId [-TenantUrl &lt;String&gt;] [&lt;CommonParameters&gt;]
+<h3 id="by-tenanturl">By TenantUrl</h3>
+<pre><code class="lang-powershell">Get-PnPTenantId -TenantUrl &lt;String&gt; [-AzureEnvironment &lt;AzureEnvironment&gt;]
+</code></pre>
+<h3 id="by-connection">By connection</h3>
+<pre><code class="lang-powershell">Get-PnPTenantId [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows to retrieve id of tenant. This does not require an active connection to that tenant.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Get-PnPTenantId
 </code></pre>
-<p>Returns the current Tenant Id. A valid connection with Connect-PnPOnline is required.</p>
+<p>Returns the current Tenant Id. A valid connection with Connect-PnPOnline is required either as a current connection or by providing it using the -Connection parameter.</p>
 <h3 id="example-2">EXAMPLE 2</h3>
-<pre><code class="lang-powershell">Get-PnPTenantId -TenantUrl &quot;https://contoso.sharepoint.com&quot;
+<pre><code class="lang-powershell">Get-PnPTenantId contoso
 </code></pre>
-<p>Returns the Tenant ID for the specified tenant. Can be executed without a connecting first with Connect-PnPOnline</p>
+<p>Returns the Tenant ID for the tenant contoso.sharepoint.com. Can be executed without an active PnP Connection.</p>
+<h3 id="example-3">EXAMPLE 3</h3>
+<pre><code class="lang-powershell">Get-PnPTenantId -TenantUrl contoso.sharepoint.com
+</code></pre>
+<p>Returns the Tenant ID for the specified tenant. Can be executed without an active PnP Connection.</p>
+<h3 id="example-4">EXAMPLE 4</h3>
+<pre><code class="lang-powershell">Get-PnPTenantId -TenantUrl contoso.sharepoint.us -AzureEnvironment USGovernment
+</code></pre>
+<p>Returns the Tenant ID for the specified US Government tenant. Can be executed without an active PnP Connection.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-tenanturl">-TenantUrl</h3>
+<p>The name of the tenant to retrieve the id for. If not specified, the currently connected to tenant will be used. You can use either just the tenant name, i.e. consoto or the full SharePoint URL, i.e. contoso.sharepoint.com.</p>
 <pre><code class="lang-yaml">Type: String
-Parameter Sets: (All)
+Parameter Sets: By URL
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-azureenvironment">-AzureEnvironment</h3>
+<p>The Azure environment to use for the tenant lookup. It defaults to 'Production' which is the main Azure environment.</p>
+<pre><code class="lang-yaml">Type: AzureEnvironment
+Parameter Sets: By URL
+Accepted values: Production, PPE, China, Germany, USGovernment, USGovernmentHigh, USGovernmentDoD
 
 Required: False
 Position: Named
-Default value: None
+Default value: Production
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-connection">-Connection</h3>
+<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection. If not specified, the current connection will be used.</p>
+<pre><code class="lang-yaml">Type: PnPConnection
+Parameter Sets: From connection
+
+Required: False
+Position: Named
+Default value: Current connection
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
@@ -137,5 +174,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

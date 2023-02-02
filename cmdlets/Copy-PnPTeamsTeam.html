@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Copy-PnPTeamsTeam | PnP PowerShell </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Copy-PnPTeamsTeam | PnP PowerShell ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
+    <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+                    <h1 id="copy-pnpteamsteam">Copy-PnPTeamsTeam</h1>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<p>Creates a copy of a Microsoft Teams team</p>
+<h2 id="syntax">SYNTAX</h2>
+<h3 id="clone-a-team">Clone a team</h3>
+<pre><code class="lang-powershell">Copy-PnPTeamsTeam -DisplayName &lt;String&gt; -Identity &lt;TeamsTeamPipeBind&gt; [-PartsToClone &lt;ClonableTeamParts[]&gt;] [-Description &lt;String&gt;] [-Visibility &lt;TeamVisibility&gt;] [-Classification &lt;String&gt;] [-Verbose] [-Connection &lt;PnPConnection&gt;]
+</code></pre>
+<h2 id="description">DESCRIPTION</h2>
+<p>Using this command, global admins and Microsoft Teams service admins can access teams that they are not a member of to make a copy of them.</p>
+<p>Creates a copy of a team. This operation also creates a copy of the corresponding group. You can specify which parts of the team to clone:</p>
+<p>apps - Copies Microsoft Teams apps that are installed in the team.
+channels – Copies the channel structure (but not the messages in the channel).
+members – Copies the members and owners of the group.
+settings – Copies all settings within the team, along with key group settings.
+tabs – Copies the tabs within channels.</p>
+<p>When tabs are cloned, they are put into an unconfigured state -- they are displayed on the tab bar in Microsoft Teams, and the first time you open them, you'll go through the configuration screen. If the person opening the tab does not have permission to configure apps, they will see a message explaining that the tab hasn't been configured.</p>
+<h2 id="examples">EXAMPLES</h2>
+<h3 id="example-1">EXAMPLE 1</h3>
+<pre><code class="lang-powershell">Copy-PnPTeamsTeam -Identity ee0f40fc-b2f7-45c7-b62d-11b90dd2ea8e -DisplayName &quot;Library Assist&quot; -PartsToClone apps,tabs,settings,channels,members
+</code></pre>
+<p>Creates a clone of a Microsoft Teams team named &quot;Library Assist&quot; from Microsoft Teams team ID ee0f40fc-b2f7-45c7-b62d-11b90dd2ea8e with the apps,tabs,settings,channels and members</p>
+<h3 id="example-2">EXAMPLE 2</h3>
+<pre><code class="lang-powershell">Copy-PnPTeamsTeam -Identity &quot;Team 12&quot; -DisplayName &quot;Library Assist&quot;
+</code></pre>
+<p>Creates a clone of a Microsoft Teams team named &quot;Library Assist&quot; from Microsoft Teams team &quot;Team 12&quot; with the all the available parts</p>
+<h3 id="example-3">EXAMPLE 3</h3>
+<pre><code class="lang-powershell">Copy-PnPTeamsTeam -Identity &quot;Team 12&quot; -DisplayName &quot;Library Assist&quot; -PartsToClone apps,tabs,settings,channels,members -Description &quot;Self help community for library&quot; -Classification &quot;Library&quot; -Visibility public
+</code></pre>
+<p>Creates a clone of a Microsoft Teams team named &quot;Library Assist&quot; from Microsoft Teams team  &quot;Team 12&quot; with the apps,tabs,settings,channels and members setting the classication to &quot;Library&quot;, Visibility to public and Description to &quot;Self help community for library&quot;</p>
+<h3 id="example-4">EXAMPLE 4</h3>
+<pre><code class="lang-powershell">Copy-PnPTeamsTeam -Identity &quot;Team 12&quot; -DisplayName &quot;Library Assist&quot; -PartsToClone settings,channels -Description &quot;Self help community for library&quot; -Classification &quot;Library&quot; -Visibility public
+</code></pre>
+<p>Creates a clone of a Microsoft Teams team named &quot;Library Assist&quot; from Microsoft Teams team  &quot;Team 12&quot; with the settings and channels setting the classication to &quot;Library&quot;, Visibility to public and Description to &quot;Self help community for library&quot;</p>
+<h2 id="parameters">PARAMETERS</h2>
+<h3 id="-connection">-Connection</h3>
+<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
+<pre><code class="lang-yaml">Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-identity">-Identity</h3>
+<p>Specify the group id, mailNickname or display name of the team to use.</p>
+<pre><code class="lang-yaml">Type: TeamsTeamPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-displayname">-DisplayName</h3>
+<p>The display name for the group. This property is required when a group is created and it cannot be cleared during updates. Supports $filter and $orderby.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-partstoclone">-PartsToClone</h3>
+<p>A comma-separated list of the parts to clone. Allowed values are apps,channels,members,settings,tabs. When not provided, all available parts will be cloned.</p>
+<pre><code class="lang-yaml">Type: ClonableTeamParts
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: apps,channels,members,settings,tabs
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-visibility">-Visibility</h3>
+<p>Specifies the visibility of the group. Possible values are: Private, Public. If visibility is not specified, the visibility will be copied from the original team/group. If the team being cloned is an educationClass team, the visibility parameter is ignored, and the new group's visibility will be set to HiddenMembership.</p>
+<pre><code class="lang-yaml">Type: teamVisibilityType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-classification">-Classification</h3>
+<p>Describes a classification for the group (such as low, medium or high business impact). If classification is not specified, the classification will be copied from the original team/group.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h2 id="related-links">RELATED LINKS</h2>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+            <img src="https://telemetry.sharepointpnp.com/@pnp.github.io/index/" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
+</html>

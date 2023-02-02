@@ -88,11 +88,12 @@
 <ul>
 <li>Microsoft Graph API: All of Group.ReadWrite.All, User.ReadWrite.All</li>
 </ul>
-<p>Adds members to a owners of a Microsoft 365 Group</p>
+<p>Adds users to a Microsoft 365 Group as Owners.</p>
 <h2 id="syntax">SYNTAX</h2>
 <pre><code class="lang-powershell">Add-PnPMicrosoft365GroupOwner -Identity &lt;Microsoft365GroupPipeBind&gt; -Users &lt;String[]&gt; [-RemoveExisting] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows to add multiple users to Microsoft 365 Group as owners.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Add-PnPMicrosoft365GroupOwner -Identity &quot;Project Team&quot; -Users &quot;john@contoso.onmicrosoft.com&quot;,&quot;jane@contoso.onmicrosoft.com&quot;
@@ -115,7 +116,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-removeexisting">-RemoveExisting</h3>
-<p>If provided, all existing members will be removed and only those provided through Users will become members</p>
+<p>If provided, all existing owners will be removed and only those provided through Users will become owners</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
 
@@ -126,7 +127,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-users">-Users</h3>
-<p>The UPN(s) of the user(s) to add to the Microsoft 365 Group as a member</p>
+<p>The UPN(s) of the user(s) to add to the Microsoft 365 Group as an owner</p>
 <pre><code class="lang-yaml">Type: String[]
 Parameter Sets: (All)
 
@@ -138,7 +139,7 @@ Accept wildcard characters: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
 <p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a>
-<a href="https://docs.microsoft.com/graph/api/group-post-members">Microsoft Graph documentation</a></p>
+<a href="https://learn.microsoft.com/graph/api/group-post-members">Microsoft Graph documentation</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -165,5 +166,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

@@ -88,28 +88,23 @@
 <h2 id="syntax">SYNTAX</h2>
 <h3 id="add-field-to-list-default">Add field to list (Default)</h3>
 <pre><code class="lang-powershell">Add-PnPField [-List &lt;ListPipeBind&gt;] -DisplayName &lt;String&gt; -InternalName &lt;String&gt; -Type &lt;FieldType&gt;
- [-Id &lt;Guid&gt;] [-AddToDefaultView] [-Required] [-Group &lt;String&gt;] [-ClientSideComponentId &lt;Guid&gt;]
- [-ClientSideComponentProperties &lt;String&gt;] [-AddToAllContentTypes] [-Connection &lt;PnPConnection&gt;]
- [&lt;CommonParameters&gt;]
+ [-Id &lt;Guid&gt;] [-Formula &lt;String&gt;] [-Choices &lt;String&gt;] [-AddToDefaultView] [-Required] [-Group &lt;String&gt;] [-ClientSideComponentId &lt;Guid&gt;]
+ [-ClientSideComponentProperties &lt;String&gt;] [-AddToAllContentTypes] [-ReturnType &lt;String&gt;] [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h3 id="add-field-reference-to-list">Add field reference to list</h3>
 <pre><code class="lang-powershell">Add-PnPField -List &lt;ListPipeBind&gt; -Field &lt;FieldPipeBind&gt; [-Connection &lt;PnPConnection&gt;]
  [&lt;CommonParameters&gt;]
 </code></pre>
 <h3 id="add-field-to-web">Add field to web</h3>
-<pre><code class="lang-powershell">Add-PnPField -DisplayName &lt;String&gt; -InternalName &lt;String&gt; -Type &lt;FieldType&gt; [-Id &lt;Guid&gt;]
- [-ClientSideComponentId &lt;Guid&gt;] [-ClientSideComponentProperties &lt;String&gt;] 
- [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
-</code></pre>
-<h3 id="add-field-by-xml-to-list">Add field by XML to list</h3>
-<pre><code class="lang-powershell">Add-PnPField [-AddToDefaultView] [-Required] [-Group &lt;String&gt;] [-AddToAllContentTypes]
- [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+<pre><code class="lang-powershell">Add-PnPField -DisplayName &lt;String&gt; -InternalName &lt;String&gt; -Type &lt;FieldType&gt; [-Id &lt;Guid&gt;] [-Formula &lt;String&gt;] [-Choices &lt;String&gt;]
+ [-ClientSideComponentId &lt;Guid&gt;] [-ClientSideComponentProperties &lt;String&gt;] [-ReturnType &lt;String&gt;]
+ [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
 <p>Adds a field (a column) to a list or as a site column. To add a column of type Managed Metadata use the Add-PnPTaxonomyField cmdlet.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Add-PnPField -Type Calculated -InternalName &quot;C1&quot; -DisplayName &quot;C1&quot; -Formula =&quot;[Title]&quot;
+<pre><code class="lang-powershell">Add-PnPField -Type Calculated -InternalName &quot;C1&quot; -DisplayName &quot;C1&quot; -Formula &quot;=[Title]&quot;
 </code></pre>
 <p>Adds a new calculated site column with the formula specified</p>
 <h3 id="example-2">EXAMPLE 2</h3>
@@ -120,11 +115,23 @@
 <pre><code class="lang-powershell">Add-PnPField -List &quot;Demo list&quot; -DisplayName &quot;Speakers&quot; -InternalName &quot;SPSSpeakers&quot; -Type MultiChoice -Group &quot;Demo Group&quot; -AddToDefaultView -Choices &quot;Obiwan Kenobi&quot;,&quot;Darth Vader&quot;, &quot;Anakin Skywalker&quot;
 </code></pre>
 <p>This will add a field of type Multiple Choice to the list &quot;Demo List&quot;. (you can pick several choices for the same item)</p>
+<h3 id="example-4">EXAMPLE 4</h3>
+<pre><code class="lang-powershell">Add-PnPField -List &quot;Demo List&quot; -Field &quot;MyTestCol&quot;
+</code></pre>
+<p>This will add an existing site column called &quot;MyTestCol&quot; to the list &quot;Demo List&quot;.</p>
+<h3 id="example-5">EXAMPLE 5</h3>
+<pre><code class="lang-powershell">Add-PnPField -Type Choice -Choices &quot;PnP&quot;,&quot;Parker&quot;,&quot;Sharing Is Caring&quot; -DisplayName &quot;My Test Column&quot; -InternalName &quot;MyTestCol&quot;
+</code></pre>
+<p>This will add a site column of type Choice (only one choice value can be chosen at the same time) called &quot;My Test Column&quot; with three choice values.</p>
+<h3 id="example-6">EXAMPLE 6</h3>
+<pre><code class="lang-powershell">Add-PnPField -Type Calculated -ResultType Number -DisplayName &quot;My Calculated Column&quot; -InternalName &quot;MyCalcCol&quot; -Formula &quot;=Today()&quot;
+</code></pre>
+<p>This will add a site column of type Caulculated called &quot;My Calculated Column&quot; which contains todays date.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-addtodefaultview">-AddToDefaultView</h3>
 <p>Switch Parameter if this field must be added to the default view</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
-Parameter Sets: Add field to list, Add field by XML to list
+Parameter Sets: Add field to list, Add field to web
 
 Required: False
 Position: Named
@@ -135,7 +142,18 @@ Accept wildcard characters: False
 <h3 id="-addtoallcontenttypes">-AddToAllContentTypes</h3>
 <p>Switch Parameter if this field must be added to all content types</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
-Parameter Sets: Add field to list, Add field by XML to list
+Parameter Sets: Add field to list, Add field to web
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-choices">-Choices</h3>
+<p>The Choice values when field type is Choice or MultiChoice</p>
+<pre><code class="lang-yaml">Type: String[]
+Parameter Sets: Add field to list (Choice or MultiChoice Field Chosen), Add field to web (Choice or MultiChoice Field Chosen)
 
 Required: False
 Position: Named
@@ -198,6 +216,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-formula">-Formula</h3>
+<p>The Formula when Calculated column is chosen.</p>
+<pre><code class="lang-yaml">Type: String[]
+Parameter Sets: Add field to list (Calculated Field), Add field to web  (Calculated Field)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-group">-Group</h3>
 <p>The group name to where this field belongs to</p>
 <pre><code class="lang-yaml">Type: String
@@ -254,7 +283,7 @@ Accept wildcard characters: False
 <h3 id="-required">-Required</h3>
 <p>Switch Parameter if the field is a required field</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
-Parameter Sets: Add field to list, Add field by XML to list
+Parameter Sets: Add field to list, Add field to web
 
 Required: False
 Position: Named
@@ -263,7 +292,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-type">-Type</h3>
-<p>The type of the field like Choice, Note, MultiChoice. For a complete list of field types visit <a href="https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype">https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype</a></p>
+<p>The type of the field like Choice, Note, Calculate, MultiChoice. For a complete list of field types visit <a href="https://learn.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype">https://learn.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype</a></p>
 <pre><code class="lang-yaml">Type: FieldType
 Parameter Sets: Add field to list, Add field to web
 Accepted values: Invalid, Integer, Text, Note, DateTime, Counter, Choice, Lookup, Boolean, Number, Currency, URL, Computed, Threading, Guid, MultiChoice, GridChoice, Calculated, File, Attachments, User, Recurrence, CrossProjectLink, ModStat, Error, ContentTypeId, PageSeparator, ThreadIndex, WorkflowStatus, AllDayEvent, WorkflowEventType, Geolocation, OutcomeChoice, Location, Thumbnail, MaxItems
@@ -271,6 +300,18 @@ Accepted values: Invalid, Integer, Text, Note, DateTime, Counter, Choice, Lookup
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-returntype">-ReturnType</h3>
+<p>The return type of the calculated field. Only valid when Type Calculated is chosen.</p>
+<pre><code class="lang-yaml">Type: FieldType
+Parameter Sets: Add field to list, Add field to web
+Accepted values: Integer, Text, DateTime, Boolean, Number, Currency
+
+Required: False
+Position: Named
+Default value: Text
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
@@ -302,5 +343,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

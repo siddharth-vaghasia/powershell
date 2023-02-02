@@ -84,17 +84,17 @@
                     <h1 id="send-pnpmail">Send-PnPMail</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>Sends an email using the Office 365 SMTP Service or SharePoint, depending on the parameters specified. See detailed help for more information.</p>
+<p>Sends an email using the Office 365 SMTP Service or SharePoint, depending on the parameters specified.</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Send-PnPMail [-Server &lt;String&gt;] [-From &lt;String&gt;] [-Password &lt;String&gt;] -To &lt;String[]&gt; [-Cc &lt;String[]&gt;]
- -Subject &lt;String&gt; -Body &lt;String&gt; [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+<pre><code class="lang-powershell">Send-PnPMail [-Server &lt;String&gt;] [-From &lt;String&gt;] [-Password &lt;String&gt;] -To &lt;String[]&gt; [-Cc &lt;String[]&gt;] [-Bcc &lt;String[]&gt;] -Subject &lt;String&gt; -Body &lt;String&gt; [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows to send an email using the Office 365 SMTP Service or SharePoin.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Send-PnPMail -To address@tenant.sharepointonline.com -Subject test -Body test
+<pre><code class="lang-powershell">Send-PnPMail -To address@tenant.microsoftonline.com -Subject test -Body test
 </code></pre>
-<p>Sends an e-mail using the SharePoint SendEmail method using the current context. E-mail is sent from the system account and can only be sent to accounts in the same tenant</p>
+<p>Sends an e-mail using the SharePoint SendEmail method using the current context. E-mail is sent from the system account and can only be sent to accounts in the same tenant.</p>
 <h3 id="example-2">EXAMPLE 2</h3>
 <pre><code class="lang-powershell">Send-PnPMail -To address@contoso.com -Subject test -Body test -From me@tenant.onmicrosoft.com -Password xyz
 </code></pre>
@@ -117,6 +117,17 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-cc">-Cc</h3>
 <p>List of recipients on CC</p>
+<pre><code class="lang-yaml">Type: String[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-bcc">-Bcc</h3>
+<p>List of recipients on BCC</p>
 <pre><code class="lang-yaml">Type: String[]
 Parameter Sets: (All)
 
@@ -181,7 +192,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-to">-To</h3>
-<p>List of recipients</p>
+<p>List of recipients as a string array</p>
 <pre><code class="lang-yaml">Type: String[]
 Parameter Sets: (All)
 
@@ -219,5 +230,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

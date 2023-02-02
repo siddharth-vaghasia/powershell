@@ -85,16 +85,20 @@
 
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Updates a list item</p>
+<a href="https://pnp.github.io/powershell/articles/batching.html">
+<img src="https://raw.githubusercontent.com/pnp/powershell/gh-pages/images/batching/Batching.png" alt="Supports Batching">
+</a>
 <h2 id="syntax">SYNTAX</h2>
 <h3 id="single">Single</h3>
-<pre><code class="lang-powershell">Set-PnPListItem [-List] &lt;ListPipeBind&gt; -Identity &lt;ListItemPipeBind&gt; [-ContentType &lt;ContentTypePipeBind&gt;]
- [-Values &lt;Hashtable&gt;] [-UpdateType &lt;UpdateType&gt;] [-Label &lt;String&gt;] [-ClearLabel] [-Connection &lt;PnPConnection&gt;]
+<pre><code class="lang-powershell">Set-PnPListItem [-List &lt;ListPipeBind&gt;] -Identity &lt;ListItemPipeBind&gt; [-ContentType &lt;ContentTypePipeBind&gt;]
+ [-Values &lt;Hashtable&gt;] [-UpdateType &lt;UpdateType&gt;] [-Label &lt;String&gt;] [-ClearLabel] [-Force] [-Connection &lt;PnPConnection&gt;] 
 </code></pre>
 <h3 id="batched">Batched</h3>
-<pre><code class="lang-powershell">Set-PnPListItem [-List] &lt;ListPipeBind&gt; -Identity &lt;ListItemPipeBind&gt; -Batch &lt;PnPBatch&gt; [-ContentType &lt;ContentTypePipeBind&gt;]
- [-Values &lt;Hashtable&gt;] [-UpdateType &lt;UpdateType&gt; [-UpdateOverwriteVersion] [-Connection &lt;PnPConnection&gt;]
+<pre><code class="lang-powershell">Set-PnPListItem [-List &lt;ListPipeBind&gt;] -Identity &lt;ListItemPipeBind&gt; -Batch &lt;PnPBatch&gt; [-ContentType &lt;ContentTypePipeBind&gt;]
+ [-Values &lt;Hashtable&gt;] [-UpdateType &lt;UpdateType&gt;] [-Force] [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows to modify a list item.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Set-PnPListItem -List &quot;Demo List&quot; -Identity 1 -Values @{&quot;Title&quot; = &quot;Test Title&quot;; &quot;Category&quot;=&quot;Test Category&quot;}
@@ -114,7 +118,7 @@
 <p>Sets the retention label in the list item with ID 1 in the &quot;Demo List&quot;.</p>
 <h3 id="example-5">EXAMPLE 5</h3>
 <pre><code class="lang-powershell">$batch = New-PnPBatch
-for($i=0;$i -lt 100;$i++)
+for($i=1;$i -lt 100;$i++)
 {
     Set-PnPListItem -List &quot;Demo List&quot; -Identity $i -Values @{&quot;Title&quot;=&quot;Updated Title&quot;} -Batch $batch
 }
@@ -207,17 +211,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-updateoverwriteversion">-UpdateOverwriteVersion</h3>
-<p>Update the item without creating a new version. It will not trigger events registered on the list.</p>
-<pre><code class="lang-yaml">Type: UpdateType
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Default value: Update
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
 <h3 id="-clearlabel">-ClearLabel</h3>
 <p>Clears the retention label of the item.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
@@ -236,7 +229,6 @@ Accept wildcard characters: False
 <p>Rich text: -Values @{&quot;MultiTextField&quot; = &quot;&lt;strong&gt;New&lt;/strong&gt; text&quot;}</p>
 <p>Choice: -Values @{&quot;ChoiceField&quot; = &quot;Value 1&quot;}</p>
 <p>Number: -Values @{&quot;NumberField&quot; = &quot;10&quot;}</p>
-<p>Currency: -Values @{&quot;NumberField&quot; = &quot;10&quot;}</p>
 <p>Currency: -Values @{&quot;CurrencyField&quot; = &quot;10&quot;}</p>
 <p>Date and Time: -Values @{&quot;DateAndTimeField&quot; = &quot;03/13/2015 14:16&quot;}</p>
 <p>Lookup (id of lookup value): -Values @{&quot;LookupField&quot; = &quot;2&quot;}</p>
@@ -251,6 +243,17 @@ Accept wildcard characters: False
 <p>Managed Metadata (multiple values with ids of terms): -Values @{&quot;MetadataField&quot; = (&quot;fe40a95b-2144-4fa2-b82a-0b3d0299d818&quot;,&quot;52d88107-c2a8-4bf0-adfa-04bc2305b593&quot;)}</p>
 <p>Hyperlink or Picture: -Values @{&quot;HyperlinkField&quot; = &quot;https://pnp.github.com/powershell, PnP PowerShell Home&quot;}</p>
 <pre><code class="lang-yaml">Type: Hashtable
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-force">-Force</h3>
+<p>Forces update of the list item even if there are no value changes. This can be useful for triggering webhooks, event receivers, Flows, etc.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
@@ -287,5 +290,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

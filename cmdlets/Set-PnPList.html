@@ -91,10 +91,12 @@
  [-Hidden &lt;Boolean&gt;] [-ForceCheckout &lt;Boolean&gt;] [-ListExperience &lt;ListExperience&gt;]
  [-EnableAttachments &lt;Boolean&gt;] [-EnableFolderCreation &lt;Boolean&gt;] [-EnableVersioning &lt;Boolean&gt;]
  [-EnableMinorVersions &lt;Boolean&gt;] [-MajorVersions &lt;UInt32&gt;] [-MinorVersions &lt;UInt32&gt;]
- [-EnableModeration &lt;Boolean&gt;] [-ReadSecurity &lt;ListReadSecurity&gt;] [-WriteSecurity &lt;ListWriteSecurity&gt;]
- [-NoCrawl] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+ [-EnableModeration &lt;Boolean&gt;] [-DraftVersionVisibility &lt;DraftVisibilityType&gt;] [-ReadSecurity &lt;ListReadSecurity&gt;] [-WriteSecurity &lt;ListWriteSecurity&gt;]
+ [-NoCrawl] [-ExemptFromBlockDownloadOfNonViewableFiles &lt;Boolean&gt;] [-DisableGridEditing &lt;Boolean&gt;] 
+ [-Path &lt;String&gt;] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows the configuration of a specific SharePoint Online list to be set.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Set-PnPList -Identity &quot;Demo List&quot; -EnableContentTypes $true
@@ -120,9 +122,24 @@
 <pre><code class="lang-powershell">Set-PnPList -Identity &quot;Demo List&quot; -EnableAttachments $true
 </code></pre>
 <p>Turns on attachments on a list</p>
+<h3 id="example-7">EXAMPLE 7</h3>
+<pre><code class="lang-powershell">Set-PnPList -Identity &quot;Demo List&quot; -Title &quot;Demo List 2&quot; -Path &quot;Lists/DemoList2&quot;
+</code></pre>
+<p>Rename a list, including its' URL.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-breakroleinheritance">-BreakRoleInheritance</h3>
-<p>If used the security inheritance is broken for this list</p>
+<p>If used the security inheritance is broken for this list from its parent, the web in which it resides. Permissions can be added using <a href="Set-PnPListPermission.html">Set-PnPListPermission</a>.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-resetroleinheritance">-ResetRoleInheritance</h3>
+<p>If used the security inheritance is reset for this list meaning it will not copy the permissions from its parent, but will start with an empty list of permissions. Permissions can be added using <a href="Set-PnPListPermission.html">Set-PnPListPermission</a>.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
 
@@ -231,6 +248,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-draftversionvisibility">-DraftVersionVisibility</h3>
+<p>Specify which users should be able to view drafts in this list.</p>
+<pre><code class="lang-yaml">Type: DraftVisibilityType
+Parameter Sets: (All)
+Accepted values: Approver, Author, Reader
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-enableversioning">-EnableVersioning</h3>
 <p>Enable or disable versioning. Set to $true to enable, $false to disable.</p>
 <pre><code class="lang-yaml">Type: Boolean
@@ -299,19 +327,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-minorversions">-MinorVersions</h3>
-<p>Maximum minor versions to keep</p>
+<p>Maximum major versions for which to keep minor versions</p>
 <pre><code class="lang-yaml">Type: UInt32
-Parameter Sets: (All)
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-resetroleinheritance">-ResetRoleInheritance</h3>
-<p>If used the security inheritance is reset for this list (inherited from parent)</p>
-<pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
 
 Required: False
@@ -364,6 +381,39 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-exemptfromblockdownloadofnonviewablefiles">-ExemptFromBlockDownloadOfNonViewableFiles</h3>
+<p>Allows to configure access capabilities for unmanaged devices for the list. If set to $true, the list will be accessible by unmanaged devices as well. For more information, see <a href="https://learn.microsoft.com/sharepoint/control-access-from-unmanaged-devices">SharePoint and OneDrive unmanaged device access controls for administrators</a>.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-disablegridediting">-DisableGridEditing</h3>
+<p>Enable or disable whether edit grid editing is enabled for the list. Set to $true to disable, $false to enable.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-path">-Path</h3>
+<p>The new URL path of the list. The parent folder must exist and be in the same site/web. I.e. lists\newname.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
 <p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
@@ -392,5 +442,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

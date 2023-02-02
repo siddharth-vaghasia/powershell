@@ -93,6 +93,7 @@
 <pre><code class="lang-powershell">New-PnPAzureADGroup -DisplayName &lt;String&gt; -Description &lt;String&gt; -MailNickname &lt;String&gt; [-Owners &lt;String[]&gt;] [-Members &lt;String[]&gt;] [-IsSecurityEnabled &lt;SwitchParameter&gt;] [-IsMailEnabled &lt;SwitchParameter&gt;] [-Force] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows to create an Azure Active Directory group. This can be either security or distribution group.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">New-PnPAzureADGroup -DisplayName $displayName -Description $description -MailNickname $nickname
@@ -197,7 +198,7 @@ Accept wildcard characters: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
 <p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a>
-<a href="https://docs.microsoft.com/graph/api/group-post-groups">Microsoft Graph documentation</a></p>
+<a href="https://learn.microsoft.com/graph/api/group-post-groups">Microsoft Graph documentation</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -224,5 +225,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

@@ -92,6 +92,7 @@
 <h2 id="syntax">SYNTAX</h2>
 <h3 id="set-properties">Set Properties</h3>
 <pre><code class="lang-powershell">Set-PnPTenantSite [-Identity] &lt;String&gt; [-Title &lt;String&gt;] [-LocaleId &lt;UInt32&gt;] [-AllowSelfServiceUpgrade]
+ [-PrimarySiteCollectionAdmin &lt;String&gt;]
  [-Owners &lt;String[]&gt;] [-DenyAddAndCustomizePages]
  [-SharingCapability &lt;SharingCapabilities&gt;] [-StorageQuota &lt;Int64&gt;] [-StorageQuotaWarningLevel &lt;Int64&gt;] [-StorageQuotaReset] [-BlockDownloadLinksFileType &lt;BlockDownloadLinksFileTypes&gt;]
  [-ResourceQuota &lt;Double&gt;] [-ResourceQuotaWarningLevel &lt;Double&gt;] [-EnablePWA &lt;Boolean&gt;]
@@ -101,7 +102,9 @@
  [-SharingDomainRestrictionMode &lt;SharingDomainRestrictionModes&gt;] [-CommentsOnSitePagesDisabled]
  [-DisableAppViews &lt;AppViewsPolicy&gt;] [-DisableCompanyWideSharingLinks &lt;CompanyWideSharingLinksPolicy&gt;]
  [-DisableFlows &lt;FlowsPolicy&gt;] [-AnonymousLinkExpirationInDays &lt;Int32&gt;] [-SensitivityLabel &lt;String&gt;] [-RemoveLabel] [-AddInformationSegment &lt;Guid[]&gt;] [-RemoveInformationSegment &lt;Guid[]&gt;]
- [-OverrideTenantAnonymousLinkExpirationPolicy] [-InformationBarriersMode &lt;InformationBarriersMode&gt;] [-Wait] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+ [-OverrideTenantAnonymousLinkExpirationPolicy] [-InformationBarriersMode &lt;InformationBarriersMode&gt;] 
+ [-MediaTranscription &lt;MediaTranscriptionPolicyType&gt;] [-Wait] 
+ [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h3 id="set-lock-state">Set Lock State</h3>
 <pre><code class="lang-powershell">Set-PnPTenantSite [-Identity] &lt;String&gt; [-LockState &lt;SiteLockState&gt;] [-Wait] [-Connection &lt;PnPConnection&gt;]
@@ -132,7 +135,7 @@
 <p>This will enable script support for the site 'https://contoso.sharepoint.com/sites/sales'</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-addinformationsegment">-AddInformationSegment</h3>
-<p>This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read <a href="https://docs.microsoft.com/sharepoint/information-barriers">https://docs.microsoft.com/sharepoint/information-barriers</a> documentation to understand Information barriers in SharePoint Online.</p>
+<p>This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read <a href="https://learn.microsoft.com/sharepoint/information-barriers">https://learn.microsoft.com/sharepoint/information-barriers</a> documentation to understand Information barriers in SharePoint Online.</p>
 <pre><code class="lang-yaml">Type: Guid[]
 Parameter Sets: Set Properties
 
@@ -143,7 +146,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-allowselfserviceupgrade">-AllowSelfServiceUpgrade</h3>
-<p>Specifies if the site administrator can upgrade the site collection</p>
+<p>Specifies if the site administrator can upgrade the site collection.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
 
@@ -203,7 +206,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-commentsonsitepagesdisabled">-CommentsOnSitePagesDisabled</h3>
-<p>Specifies if comments on site pages are enabled</p>
+<p>Specifies if comments on site pages are enabled.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
 
@@ -252,6 +255,7 @@ Accept wildcard characters: False
 <p>When set to $true, the DefaultSharingLinkType will be overriden and the default sharing link will be All People with Existing Access link (which does not modify permissions). When set to $false (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: Set Properties
+
 Required: False
 Position: Named
 Default value: False
@@ -310,6 +314,7 @@ Accept wildcard characters: False
 <p>Specifies number of days the external users remain active on the site.</p>
 <pre><code class="lang-yaml">Type: Int32
 Parameter Sets: Set Properties
+
 Required: False
 Position: Named
 Default value: None
@@ -320,6 +325,7 @@ Accept wildcard characters: False
 <p>Determines whether site can include Project Web App. For more information about Project Web App, see Plan SharePoint groups in Project Server.</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: Set Properties
+
 Required: False
 Position: Named
 Default value: None
@@ -333,6 +339,7 @@ Accept wildcard characters: False
 <p>OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.</p>
 <pre><code class="lang-yaml">Type: SPOLimitedAccessFileType
 Parameter Sets: Set Properties
+
 Required: False
 Position: Named
 Default value: None
@@ -373,8 +380,19 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-primarysitecollectionadmin">-PrimarySiteCollectionAdmin</h3>
+<p>Specifies the user to set as the primary site collection administrator. Will replace the current primary site collection administrator. To add additional site collection administrators, use the -Owners parameter.</p>
+<pre><code class="lang-yaml">Type: PnP.PowerShell.Commands.Base.PipeBinds.UserPipeBind
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-owners">-Owners</h3>
-<p>Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.</p>
+<p>Specifies owner(s) to add as secondary site collection administrators. They will be added as additional secondary site collection administrators. Existing administrators will stay. Can be both users and groups.</p>
 <pre><code class="lang-yaml">Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: Set Properties
 
@@ -407,7 +425,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-sharingalloweddomainlist">-SharingAllowedDomainList</h3>
-<p>Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, &quot;contoso.com fabrikam.com&quot;. Effective when SharingDomainRestrictionMode is set to AllowList.</p>
+<p>Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the &quot;,&quot; (comma) character as the delimiter for entering multiple values. For example, &quot;contoso.com, fabrikam.com&quot;. Effective when SharingDomainRestrictionMode is set to AllowList.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: Set Properties
 
@@ -457,6 +475,7 @@ Accept wildcard characters: False
 <p>To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: Set Properties
+
 Required: False
 Position: Named
 Default value: None
@@ -468,6 +487,7 @@ Accept wildcard characters: False
 <pre><code class="lang-yaml">Type: Int64
 Parameter Sets: Set Properties
 Aliases: StorageMaximumLevel
+
 Required: False
 Position: Named
 Default value: None
@@ -479,6 +499,7 @@ Accept wildcard characters: False
 <pre><code class="lang-yaml">Type: Int64
 Parameter Sets: Set Properties
 Aliases: StorageQuotaMaximumLevel
+
 Required: False
 Position: Named
 Default value: None
@@ -489,6 +510,7 @@ Accept wildcard characters: False
 <p>Resets the OneDrive for Business storage quota to the tenant's new default storage space</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
+
 Required: False
 Position: Named
 Default value: None
@@ -496,9 +518,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-removeinformationsegment">-RemoveInformationSegment</h3>
-<p>This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read <a href="https://docs.microsoft.com/sharepoint/information-barriers">https://docs.microsoft.com/sharepoint/information-barriers</a> documentation to understand Information barriers with SharePoint Online.</p>
+<p>This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read <a href="https://learn.microsoft.com/sharepoint/information-barriers">https://learn.microsoft.com/sharepoint/information-barriers</a> documentation to understand Information barriers with SharePoint Online.</p>
 <pre><code class="lang-yaml">Type: Guid[]
 Parameter Sets: Set Properties
+
 Required: False
 Position: Named
 Default value: None
@@ -528,7 +551,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-informationbarriersmode">-InformationBarriersMode</h3>
-<p>Specifies the information barrier mode which helps strengthen access, sharing, and membership of a site based on its information barrier mode and segments associated with the site. Expected values are <code>Open</code>, <code>OwnerModerated</code> , <code>Implicit</code> and <code>Explicit</code>. For more information, see <a href="https://docs.microsoft.com/sharepoint/information-barriers#information-barriers-modes-and-sharepoint-sites">https://docs.microsoft.com/sharepoint/information-barriers#information-barriers-modes-and-sharepoint-sites</a></p>
+<p>Specifies the information barrier mode which helps strengthen access, sharing, and membership of a site based on its information barrier mode and segments associated with the site. Expected values are <code>Open</code>, <code>OwnerModerated</code> , <code>Implicit</code> and <code>Explicit</code>. For more information, see <a href="https://learn.microsoft.com/sharepoint/information-barriers#information-barriers-modes-and-sharepoint-sites">https://learn.microsoft.com/sharepoint/information-barriers#information-barriers-modes-and-sharepoint-sites</a></p>
 <pre><code class="lang-yaml">Type: InformationBarriersMode
 Parameter Sets: Set Properties
 Accepted values: Open, OwnerModerated, Implicit, Explicit
@@ -540,7 +563,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-title">-Title</h3>
-<p>Specifies the title of the site</p>
+<p>Specifies the title of the site.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: Set Properties
 
@@ -551,14 +574,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-identity">-Identity</h3>
-<p>Specifies the URL of the site</p>
+<p>Specifies the URL of the site.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 Aliases: Url
+
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-mediatranscription">-MediaTranscription</h3>
+<p>When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don’t want the transcript, they can always hide or delete it from that video.</p>
+<pre><code class="lang-yaml">Type: MediaTranscriptionPolicyType
+Parameter Sets: Set Properties
+Accepted values: Enabled, Disabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-wait">-Wait</h3>
@@ -600,5 +636,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>

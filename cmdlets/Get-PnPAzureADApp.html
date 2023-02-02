@@ -90,10 +90,14 @@
 </ul>
 <p>Returns Azure AD App registrations</p>
 <h2 id="syntax">SYNTAX</h2>
+<h3 id="filter">Filter</h3>
 <pre><code>Get-PnPAzureADApp [-Identity &lt;AzureADAppPipeBind&gt;]
 </code></pre>
+<h3 id="identity-default">Identity (Default)</h3>
+<pre><code>Get-PnPAzureADApp -Filter &lt;string&gt;
+</code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>This cmdlets returns all app registrations or a specific one.</p>
+<p>This cmdlets returns all app registrations, a specific one or ones matching a provided filter.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">Example 1</h3>
 <pre><code class="lang-powershell">Get-PnPAzureADApp
@@ -107,12 +111,27 @@
 <pre><code class="lang-powershell">Get-PnPAzureADApp -Identity 93a9772d-d0af-4ed8-9821-17282b64690e
 </code></pre>
 <p>This returns the Azure AD App registration with the app id specified or the id specified.</p>
+<h3 id="example-4">Example 4</h3>
+<pre><code class="lang-powershell">Get-PnPAzureADApp -Filter &quot;startswith(description, 'contoso')&quot;
+</code></pre>
+<p>This returns the Azure AD App registrations with the description starting with &quot;contoso&quot;. This example demonstrates using Advanced Query capabilities (see: <a href="https://learn.microsoft.com/graph/aad-advanced-queries?tabs=http#group-properties">https://learn.microsoft.com/graph/aad-advanced-queries?tabs=http#group-properties</a>)</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-identity">-Identity</h3>
 <p>Specify the display name, id or app id.</p>
 <pre><code class="lang-yaml">Type: AzureADAppPipeBind
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-filter">-Filter</h3>
+<p>Specify the query to pass to Graph API in $filter.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: Filter
 
 Required: False
 Position: Named
@@ -148,5 +167,12 @@ Accept wildcard characters: False
     
     <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ag6usxufyq");
+    </script>  </body>
 </html>
