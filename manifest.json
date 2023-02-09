@@ -2493,7 +2493,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPHomeSite.html",
-          "hash": "EctWwpiRFPCB8g0UKermEA=="
+          "hash": "Nv4hh2iKQhDuZ7e3lk6R/w=="
         }
       },
       "is_incremental": false,
@@ -2974,6 +2974,18 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPPlannerUserPolicy.html",
           "hash": "rFyrgW7W5zLor8yESq44yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPowerApp.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPowerApp.html",
+          "hash": "dJWtO/2N4m4Nb7eVzpvaaw=="
         }
       },
       "is_incremental": false,
@@ -5364,7 +5376,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPList.html",
-          "hash": "9jw61BFQfL5WHy47soCG4g=="
+          "hash": "Zc9cnUgIO55+lfxfWDkfXQ=="
         }
       },
       "is_incremental": false,
@@ -6747,7 +6759,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPHomeSite.html",
-          "hash": "7eygvfgqWhQGTmL6T/Dvcw=="
+          "hash": "sdVcIoGEJCn+Ob21D2E1PQ=="
         }
       },
       "is_incremental": false,
@@ -7995,7 +8007,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "bOpqfSTfXEWiIdduROJhvA=="
+          "hash": "kWbNDnk+fmjz3o34GQJ+6A=="
         }
       },
       "is_incremental": false,
@@ -8283,7 +8295,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 663,
+          "total_file_count": 664,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
