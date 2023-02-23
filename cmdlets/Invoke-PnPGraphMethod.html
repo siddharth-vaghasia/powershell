@@ -98,7 +98,7 @@
                       [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>Invokes a REST request towards the Microsoft Graph API</p>
+<p>Invokes a REST request towards the Microsoft Graph API. It will take care of potential throttling retries that are needed to retrieve the data.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">Example 1</h3>
 <pre><code class="lang-powershell">Invoke-PnPGraphMethod -Url &quot;groups?`$filter=startsWith(displayName,'ZZ')&amp;`$select=displayName&quot;
@@ -117,6 +117,10 @@ Invoke-PnPGraphMethod -Url 'groups/{id}?`$select=hideFromOutlookClients'
 <pre><code class="lang-powershell">Invoke-PnPGraphMethod -Url &quot;v1.0/users?$filter=accountEnabled ne true&amp;$count=true&quot; -Method Get -ConsistencyLevelEventual
 </code></pre>
 <p>Get users with advanced query capabilities. Use of -ConsistencyLevelEventual.</p>
+<h3 id="example-5">Example 5</h3>
+<pre><code class="lang-powershell">Invoke-PnPGraphMethod &quot;https://graph.microsoft.com/v1.0/users&quot;
+</code></pre>
+<p>Performs a GET request to retrieve users from the Microsoft Graph API using the full URL.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-additionalheaders">-AdditionalHeaders</h3>
 <p>Additional request headers</p>
