@@ -1718,6 +1718,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Export-PnPPowerApp.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Export-PnPPowerApp.html",
+          "hash": "TvVxqgj7we2E+c1bMfjKGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Export-PnPTaxonomy.md",
       "output": {
         ".html": {
@@ -8085,7 +8097,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "4gYxas3j9uK2QvNRKiivEw=="
+          "hash": "UZSas5VJXbfhR8KhBfKFhw=="
         }
       },
       "is_incremental": false,
@@ -9264,7 +9276,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 670,
+          "total_file_count": 671,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
