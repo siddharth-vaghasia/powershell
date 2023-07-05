@@ -189,6 +189,13 @@
  [-IBImplicitGroupBased &lt;Boolean&gt;]
  [-ShowOpenInDesktopOptionForSyncedFiles &lt;Boolean&gt;]
  [-ShowPeoplePickerGroupSuggestionsForIB &lt;Boolean&gt;]
+ [-BlockDownloadFileTypePolicy &lt;Boolean&gt;]
+ [-BlockDownloadFileTypeIds &lt;SPBlockDownloadFileTypeId[]&gt;]
+ [-ExcludedBlockDownloadGroupIds &lt;GUID[]&gt;]
+ [-ArchiveRedirectUrl &lt;String&gt;]
+ [-StopNew2013Workflows &lt;Boolean&gt;]
+ [-MediaTranscription &lt;MediaTranscriptionPolicyType&gt;]
+ [-MediaTranscriptionAutomaticFeatures &lt;MediaTranscriptionAutomaticFeaturesPolicyType&gt;]
  [-Force] [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
@@ -245,6 +252,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-archiveredirecturl">-ArchiveRedirectUrl</h3>
+<p>Can be used to configure a custom page to show when a user is navigating to a SharePoint Online site that has been archived using Microsoft Syntex Archiving.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-bccexternalsharinginvitations">-BccExternalSharingInvitations</h3>
 <p>When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingInvitationsList.</p>
 <p>The valid values are:
@@ -266,6 +284,17 @@ Multiple addresses can be specified by creating a comma separated list with no s
 &quot;&quot; (default) - Blank by default, this will also clear any value that has been set.
 Single or Multiple e-mail addresses - joe@contoso.com or joe@contoso.com,bob@contoso.com</p>
 <pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-blocksendlabelmismatchemail">-BlockSendLabelMismatchEmail</h3>
+<p>Allows blocking of the automated e-mail being sent when somebody uploads a document to a site that's protected with a sensitivity label and their document has a higher priority sensitivity label than the sensitivity label applied to the site. <a href="https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites?view=o365-worldwide#auditing-sensitivity-label-activities">More information</a>.</p>
+<pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 
 Required: False
@@ -413,6 +442,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-emailattestationrequired">-EmailAttestationRequired</h3>
+<p>Sets email attestation to required.</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 
@@ -759,7 +789,7 @@ Accept wildcard characters: False
 True (default) - The Shared with Everyone folder is created.
 False - No folder is created when the site and OneDrive for Business document library is created.</p>
 <p>The default behavior of the Shared with Everyone folder changed in August 2015.
-For additional information about the change, see Provision the Shared with Everyone folder in OneDrive for Business (<a href="https://support.office.com/en-us/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2?ui=en-US&amp;rs=en-US&amp;ad=US">https://support.office.com/en-us/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2?ui=en-US&amp;rs=en-US&amp;ad=US</a>)</p>
+For additional information about the change, see Provision the Shared with Everyone folder in OneDrive for Business (<a href="https://support.office.com/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2">https://support.office.com/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2</a>)</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 
@@ -770,6 +800,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-publiccdnallowedfiletypes">-PublicCdnAllowedFileTypes</h3>
+<p>Sets public CDN allowed file types, if the public CDN is enabled.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 
@@ -780,6 +811,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-publiccdnenabled">-PublicCdnEnabled</h3>
+<p>Enables or disables the public CDN.</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 
@@ -934,6 +966,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-showpeoplepickersuggestionsforguestusers">-ShowPeoplePickerSuggestionsForGuestUsers</h3>
+<p>Shows people picker suggestions for guest users. To enable the option to search for existing guest users at Tenant Level, set this parameter to $true.</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 
@@ -1128,7 +1161,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-disablepersonallistcreation">-DisablePersonalListCreation</h3>
-<p>Allows configuring whether personal lists created within the OneDrive for Business site of the user is enabled or disabled in the tenant. If set to <code>$true</code>, personal lists will be allowed to be created in the tenant. If set to <code>$false</code>, it will be disabled in the tenant.</p>
+<p>Allows configuring whether personal lists created within the OneDrive for Business site of the user is enabled or disabled in the tenant. If set to <code>$false</code>, personal lists will be allowed to be created in the tenant. If set to <code>$true</code>, it will be disabled in the tenant.</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 
@@ -1283,7 +1316,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-labelmismatchemailhelplink">-LabelMismatchEmailHelpLink</h3>
-<p>This parameter allows tenant admins to customize the &quot;Help Link&quot; in email with the subject &quot;Incompatible sensitivity label detected.&quot; When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels.</p>
+<p>This parameter allows tenant admins to customize the &quot;Help Link&quot; in email with the subject &quot;Incompatible sensitivity label detected.&quot; When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels. <a href="https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites?view=o365-worldwide#auditing-sensitivity-label-activities">More information</a>.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 
@@ -1435,7 +1468,7 @@ Accept wildcard characters: False
 <p>There's more capability for temporary collaboration by external and shared device accounts during a Teams meeting. Users can temporarily view and collaborate on whiteboards that are shared in a meeting, in a similar way to PowerPoint Live sharing.</p>
 <p>In this case, Whiteboard provides temporary viewing and collaboration on the whiteboard during the Teams meeting only. A share link isn't created and Whiteboard doesn't grant access to the file.</p>
 <p>If you have external sharing enabled for OneDrive for Business, no further action is required.</p>
-<p>If you restrict external sharing for OneDrive for Business, you can keep it restricted, and just enable this new setting in order for external and shared device accounts to work. For more information, see <a href="https://learn.microsoft.com/en-us/microsoft-365/whiteboard/manage-sharing-organizations">Manage sharing for Microsoft Whiteboard</a>.</p>
+<p>If you restrict external sharing for OneDrive for Business, you can keep it restricted, and just enable this new setting in order for external and shared device accounts to work. For more information, see <a href="https://learn.microsoft.com/microsoft-365/whiteboard/manage-sharing-organizations">Manage sharing for Microsoft Whiteboard</a>.</p>
 <pre><code class="lang-yaml">Type: SharingState
 Parameter Sets: (All)
 
@@ -1589,6 +1622,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-disablelistsync">-DisableListSync</h3>
+<p>Disables or enables sync functionality for lists.</p>
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 
@@ -1615,6 +1649,76 @@ Accept wildcard characters: False
 <p>Use this turn off setting the default sensitivity label for a document library.
 For more information on this feature, please take a look <a href="https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-default-label?view=o365-worldwide">here</a></p>
 <pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-blockdownloadfiletypepolicy">-BlockDownloadFileTypePolicy</h3>
+<p>You can block the download of Teams meeting recording files from SharePoint or OneDrive. This allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access to play the meeting recordings with no ability to download or sync files or access them through apps.</p>
+<p>This policy applies to new meeting recordings across the entire organization. You can exempt people who are members of specified security groups from the policy. This allows you to specify governance or compliance specialists who should have download access to meeting recordings.</p>
+<p>After the policy is turned on, any new Teams meeting recording files created by the Teams service and saved in SharePoint and OneDrive are blocked from download.</p>
+<p>Because this policy affects meeting recordings stored in OneDrive and SharePoint, you must be a SharePoint administrator to configure it.</p>
+<p>Note that this policy doesn't apply to manually uploaded meeting recording files. For more details, see <a href="https://learn.microsoft.com/microsoftteams/block-download-meeting-recording">Block the download of Teams meeting recording files from SharePoint or OneDrive.</a></p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-blockdownloadfiletypeids">-BlockDownloadFileTypeIds</h3>
+<p>The File Type IDs which need to specified to prevent download.</p>
+<pre><code class="lang-yaml">Type: SPBlockDownloadFileTypeId[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-excludedblockdownloadgroupids">-ExcludedBlockDownloadGroupIds</h3>
+<p>This parameter exempts users in the specified security groups from this policy so that they can download meeting recording files.</p>
+<pre><code class="lang-yaml">Type: GUID[]
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-stopnew2013workflows">-StopNew2013Workflows</h3>
+<p>This parameter allows disablement of creation of new SharePoint 2013 workflows in the tenant</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-mediatranscription">-MediaTranscription</h3>
+<p>When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don’t want the transcript, they can always hide or delete it from that video. Possible values: Enabled, Disabled.</p>
+<pre><code class="lang-yaml">Type: MediaTranscriptionPolicyType
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-mediatranscriptionautomaticfeatures">-MediaTranscriptionAutomaticFeatures</h3>
+<p>When the feature is enabled, videos can have transcripts generated automatically on upload. The policy is default on. If a tenant admin decides to disable the feature, he can do so by disabling the policy at tenant level. This feature can not be enabled or disabled at site level. Possible values: Enabled, Disabled.</p>
+<pre><code class="lang-yaml">Type: MediaTranscriptionAutomaticFeaturesPolicyType
 Parameter Sets: (All)
 
 Required: False

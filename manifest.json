@@ -442,6 +442,36 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFileAnonymousSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFileAnonymousSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFileOrganizationalSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFileOrganizationalSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFileSharingInvite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFileSharingInvite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Add-PnPFileToSiteTemplate.md",
       "output": {
         ".html": {
@@ -452,10 +482,60 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFileUserSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFileUserSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Add-PnPFolder.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPFolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFolderAnonymousSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFolderAnonymousSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFolderOrganizationalSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFolderOrganizationalSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFolderSharingInvite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFolderSharingInvite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPFolderUserSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPFolderUserSharingLink.html"
         }
       },
       "version": ""
@@ -2024,6 +2104,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPFileSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPFileSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPFileVersion.md",
       "output": {
         ".html": {
@@ -2068,6 +2158,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPFolderItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPFolderSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPFolderSharingLink.html"
         }
       },
       "version": ""
@@ -2254,6 +2354,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPLargeListOperationStatus.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPLargeListOperationStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPList.md",
       "output": {
         ".html": {
@@ -2318,6 +2428,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPListItemPermission.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPListItemVersion.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPListItemVersion.html"
         }
       },
       "version": ""
@@ -3394,6 +3514,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPUnfurlLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPUnfurlLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPUnifiedAuditLog.md",
       "output": {
         ".html": {
@@ -3781,6 +3911,26 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Move-PnPPageComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Move-PnPTerm.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Move-PnPTerm.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Move-PnPTermSet.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Move-PnPTermSet.html"
         }
       },
       "version": ""
@@ -4457,6 +4607,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPFileSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPFileSharingLink.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPFileVersion.md",
       "output": {
         ".html": {
@@ -4481,6 +4641,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPFolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPFolderSharingLink.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPFolderSharingLink.html"
         }
       },
       "version": ""
@@ -4621,6 +4791,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPListItemComments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPListItemVersion.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPListItemVersion.html"
         }
       },
       "version": ""
@@ -5331,6 +5511,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Restore-PnPFileVersion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Restore-PnPListItemVersion.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Restore-PnPListItemVersion.html"
         }
       },
       "version": ""

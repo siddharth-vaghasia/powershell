@@ -84,7 +84,7 @@
   <h1 id="set-pnpwebpermission">Set-PnPWebPermission</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>Sets a web permissions</p>
+<p>Sets web permissions.</p>
 <h2 id="syntax">SYNTAX</h2>
 <pre><code class="lang-powershell">Set-PnPWebPermission -Group &lt;GroupPipeBind&gt; [-Identity &lt;WebPipeBind&gt;] [-AddRole &lt;String[]&gt;] [-RemoveRole &lt;String[]&gt;]
 </code></pre>
@@ -104,11 +104,11 @@
 <h3 id="example-3">EXAMPLE 3</h3>
 <pre><code class="lang-powershell">Set-PnPWebPermission -Identity projectA -User &quot;user@contoso.com&quot; -AddRole &quot;Contribute&quot;
 </code></pre>
-<p>Adds the &quot;Contribute&quot; permission role to the user &quot;user@contoso.com&quot; in the subweb of the current web with site relative url &quot;projectA&quot;</p>
+<p>Adds the &quot;Contribute&quot; permission role to the user &quot;user@contoso.com&quot; in the subweb of the current web with site relative url &quot;projectA&quot;.</p>
 <h3 id="example-4">EXAMPLE 4</h3>
 <pre><code class="lang-powershell">Set-PnPWebPermission -User &quot;user@contoso.com&quot; -AddRole &quot;Custom Role 1&quot;,&quot;Custom Role 2&quot;
 </code></pre>
-<p>Adds the specified permission roles to the user &quot;user@contoso.com&quot; in the current web</p>
+<p>Adds the specified permission roles to the user &quot;user@contoso.com&quot; in the current web.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-user">-User</h3>
 <p>The name of the user.</p>
@@ -155,8 +155,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-identity">-Identity</h3>
-<p>The guid or site relative url of the web to use</p>
-<pre><code class="lang-yaml">Type: Guid
+<p>The guid or site relative url of the web to use.</p>
+<pre><code class="lang-yaml">Type: WebPipeBind
 Parameter Sets: (All)
 
 Required: False

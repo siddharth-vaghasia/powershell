@@ -88,7 +88,7 @@
 <ul>
 <li>Microsoft Graph API: Sites.FullControl.All</li>
 </ul>
-<p>Adds permissions for a given Azure Active Directory application registration</p>
+<p>Adds permissions for a given Azure Active Directory application registration.</p>
 <h2 id="syntax">SYNTAX</h2>
 <pre><code class="lang-powershell">Grant-PnPAzureADAppSitePermission -AppId &lt;Guid&gt; -DisplayName &lt;String&gt; -Permissions &lt;Read|Write&gt; [-Site &lt;SitePipeBind&gt;]
 </code></pre>
@@ -98,14 +98,14 @@
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Grant-PnPAzureADAppSitePermission -AppId &quot;aa37b89e-75a7-47e3-bdb6-b763851c61b6&quot; -DisplayName &quot;TestApp&quot; -Permissions Read
 </code></pre>
-<p>Adds permissions for the Azure Active Directory application registration with the specific application id and sets the rights to 'Read' access for the currently connected to site collection</p>
+<p>Adds permissions for the Azure Active Directory application registration with the specific application id and sets the rights to 'Read' access for the currently connected to site collection.</p>
 <h3 id="example-2">EXAMPLE 2</h3>
 <pre><code class="lang-powershell">Grant-PnPAzureADAppSitePermission -AppId &quot;aa37b89e-75a7-47e3-bdb6-b763851c61b6&quot; -DisplayName &quot;TestApp&quot; -Permissions Write -Site https://contoso.sharepoint.com/sites/projects
 </code></pre>
-<p>Adds permissions for the Azure Active Directory application registration with the specific application id and sets the rights to 'Write' access for the site collection at the provided URL</p>
+<p>Adds permissions for the Azure Active Directory application registration with the specific application id and sets the rights to 'Write' access for the site collection at the provided URL.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-appid">-AppId</h3>
-<p>If specified the permission with that id specified will be retrieved</p>
+<p>If specified the permission with that id specified will be retrieved.</p>
 <pre><code class="lang-yaml">Type: Guid
 Parameter Sets: (All)
 
@@ -139,13 +139,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-site">-Site</h3>
-<p>Optional url to to a site to set the permissions for. Defaults to the current site if not provided.</p>
+<p>Optional url of a site to set the permissions for. Defaults to the current site if not provided.</p>
 <pre><code class="lang-yaml">Type: SitePipeBind
 Parameter Sets: (All)
 
 Required: True
 Position: Named
-Default value: Currently connected to site
+Default value: Currently connected site
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>

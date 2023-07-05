@@ -106,7 +106,8 @@
 <h3 id="example-4">EXAMPLE 4</h3>
 <pre><code class="lang-powershell">Remove-PnPList -Identity Announcements -Recycle -LargeList
 </code></pre>
-<p>Removes the large list named 'Announcements' and moves it to the Recycle Bin.</p>
+<p>Removes the large list named 'Announcements' and moves it to the Recycle Bin.
+Run Get-PnPLargeListOperationStatus -ListId <listid> -OperationId <operationid> to check the status of the operation.</operationid></listid></p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-connection">-Connection</h3>
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
