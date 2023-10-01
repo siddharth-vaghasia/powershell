@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "/home/runner/work/powershell/powershell/dev/pages",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -3387,6 +3386,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantInfo.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPTenantInstance.md",
       "output": {
         ".html": {
@@ -6349,6 +6358,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPSearchExternalItem.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPSearchExternalItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPSearchSettings.md",
       "output": {
         ".html": {
@@ -7029,6 +7048,20 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Update-PnPUserType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink",
+        "invalid-yaml-header"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/alias.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/alias.html"
         }
       },
       "version": ""
@@ -8104,7 +8137,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"
