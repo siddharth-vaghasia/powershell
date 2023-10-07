@@ -31,9 +31,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azureautomationrunbook.md",
       "output": {
@@ -194,9 +191,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/telemetry.md",
       "output": {
@@ -217,9 +211,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/updatenotifications.md",
       "output": {
@@ -245,6 +236,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/vscodeextension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPAdaptiveScopeProperty.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPAdaptiveScopeProperty.html"
         }
       },
       "version": ""
@@ -831,6 +832,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPPropertyBagValue.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPPropertyBagValue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Add-PnPPublishingImageRendition.md",
       "output": {
         ".html": {
@@ -865,6 +876,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPRoleDefinition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPSiteClassification.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPSiteClassification.html"
         }
       },
       "version": ""
@@ -1430,9 +1451,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Disconnect-PnPOnline.md",
       "output": {
@@ -1713,9 +1731,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPAvailableSensitivityLabel.md",
       "output": {
@@ -1726,9 +1741,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPAvailableSiteClassification.md",
       "output": {
@@ -1849,9 +1861,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPAzureADServicePrincipalAvailableAppRole.md",
       "output": {
@@ -1917,6 +1926,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPChangeLog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPClientSidePage.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPClientSidePage.html"
         }
       },
       "version": ""
@@ -2192,9 +2211,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPFolderItem.md",
       "output": {
@@ -2566,10 +2582,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupMembers.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupMembers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupOwner.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPMicrosoft365GroupOwner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupOwners.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupOwners.html"
         }
       },
       "version": ""
@@ -2826,6 +2862,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPRetentionLabel.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPRetentionLabel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPRoleDefinition.md",
       "output": {
         ".html": {
@@ -2910,6 +2956,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPSite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSiteClassification.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSiteClassification.html"
         }
       },
       "version": ""
@@ -3725,9 +3781,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Grant-PnPAzureADAppSitePermission.md",
       "output": {
@@ -3859,6 +3912,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Invoke-PnPSearchQuery.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Invoke-PnPSearchQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Invoke-PnPSiteDesign.md",
       "output": {
         ".html": {
@@ -3933,6 +3996,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Measure-PnPWeb.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Move-PnPClientSideComponent.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Move-PnPClientSideComponent.html"
         }
       },
       "version": ""
@@ -4559,6 +4632,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPClientSidePage.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPClientSidePage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPContentType.md",
       "output": {
         ".html": {
@@ -5063,6 +5146,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPSearchConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPSiteClassitication.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPSiteClassitication.html"
         }
       },
       "version": ""
@@ -5768,9 +5861,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPAzureADAppSitePermission.md",
       "output": {
@@ -5816,6 +5906,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPBuiltInSiteTemplateSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPClientSidePage.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPClientSidePage.html"
         }
       },
       "version": ""
@@ -6061,9 +6161,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPList.md",
       "output": {
@@ -6114,9 +6211,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPListPermission.md",
       "output": {
@@ -6387,9 +6481,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPSiteClassification.md",
       "output": {
@@ -6460,9 +6551,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPSiteSensitivityLabel.md",
       "output": {
@@ -7053,15 +7141,21 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink",
-        "invalid-yaml-header"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "cmdlets/alias.md",
+      "source_relative_path": "cmdlets/Update-PnPVivaConnectionsDashboardACE.md",
       "output": {
         ".html": {
-          "relative_path": "cmdlets/alias.html"
+          "relative_path": "cmdlets/Update-PnPVivaConnectionsDashboardACE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Update-SiteClassification.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Update-SiteClassification.html"
         }
       },
       "version": ""
