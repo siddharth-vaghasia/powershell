@@ -2792,10 +2792,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPowerPlatformConnectors.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPowerPlatformConnectors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPPowerPlatformEnvironment.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPPowerPlatformEnvironment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPowerPlatformSolution.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPowerPlatformSolution.html"
         }
       },
       "version": ""
@@ -7196,6 +7216,56 @@
       "output": {
         "resource": {
           "relative_path": "images/PnP_PowerShell_Roadmap.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/authentication/README.md",
+      "output": {
+        "resource": {
+          "relative_path": "images/authentication/README.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/authentication/allowPublicClient.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/authentication/allowPublicClient.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/authentication/conditionalAccess.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/authentication/conditionalAccess.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/authentication/libraryVariables.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/authentication/libraryVariables.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/authentication/namedLocations.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/authentication/namedLocations.png"
         }
       },
       "version": ""
