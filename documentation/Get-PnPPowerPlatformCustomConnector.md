@@ -2,12 +2,12 @@
 Module Name: PnP.PowerShell
 schema: 2.0.0
 applicable: SharePoint Online
-online version: https://pnp.github.io/powershell/cmdlets/Get-PnPPowerPlatformConnector.html
+online version: https://pnp.github.io/powershell/cmdlets/Get-PnPPowerPlatformCustomConnector.html
 external help file: PnP.PowerShell.dll-Help.xml
-title: Get-PnPPowerPlatformConnector
+title: Get-PnPPowerPlatformCustomConnector
 ---
   
-# Get-PnPPowerPlatformConnector
+# Get-PnPPowerPlatformCustomConnector
 
 ## SYNOPSIS
 
@@ -20,7 +20,8 @@ Returns the Custom Power Platform Connectors for a given environment
 ## SYNTAX
 
 ```powershell
-Get-PnPPowerPlatformConnector [-Environment <PowerPlatformEnvironmentPipeBind>] [-Identity <PowerPlatformConnectorPipeBind>] [-AsAdmin] [-Verbose]
+Get-PnPPowerPlatformCustomConnector [-Environment <PowerPlatformEnvironmentPipeBind>] [-Identity <PowerPlatformConnectorPipeBind>] 
+[-Connection <PnPConnection>] [-Verbose]
 ```
 
 ## DESCRIPTION
@@ -30,20 +31,22 @@ This cmdlet returns the custom connectors on a given enviroment.
 
 ### Example 1
 ```powershell
-Get-PnPPowerPlatformConnector -Environment (Get-PnPPowerPlatformEnvironment)
+$environment = Get-PnPPowerPlatformEnvironment
+Get-PnPPowerPlatformCustomConnector -Environment $environment
 ```
 This returns all the custom connectors for a given Power Platform environment
 
 ### Example 2
 ```powershell
-Get-PowerPlatformConnectorPipeBind -Environment (Get-PnPPowerPlatformEnvironment -IsDefault) -Identity fba63225-baf9-4d76-86a1-1b42c917a182
+$environment = Get-PnPPowerPlatformEnvironment
+Get-PowerPlatformCustomConnector -Environment $environment -Identity 'Tikit Connector'
 ```
-This returns a specific custom connector on the default Power Platform environment
+This returns a specific custom connector based on connector display name
 
 ## PARAMETERS
 
 ### -Environment
-The name of the Power Platform environment or an Environment instance to retrieve the available custom connectors for. If omitted, the default environment will be used.
+The name of the Power Platform environment or an Environment object to retrieve the available custom connectors for.
 
 ```yaml
 Type: PowerPlatformEnvironmentPipeBind
@@ -58,10 +61,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the connector to retrieve. If not provided, all custom connectors will be returned.
+The Display Name of the connector to retrieve.
 
 ```yaml
-Type: PowerPlatformConnectorPipeBind
+Type: PowerPlatformCustomConnectorPipeBind
 Parameter Sets: (All)
 Aliases:
 
@@ -71,12 +74,12 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -AsAdmin
-If specified returns all the custom connectors as admin. If not specified only the custom connectors for the current user will be returned.
+### -Connection
+Optional connection to be used by the cmdlet.
+Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
 ```yaml
-Type: SwitchParameter
+Type: PnPConnection
 Parameter Sets: (All)
 Aliases:
 

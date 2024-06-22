@@ -3,7 +3,6 @@ using PnP.PowerShell.Commands.Base.PipeBinds;
 using PnP.PowerShell.Commands.Utilities.REST;
 using System;
 using System.Management.Automation;
-using System.Net;
 
 namespace PnP.PowerShell.Commands.PowerPlatform.PowerAutomate
 {
@@ -49,12 +48,12 @@ namespace PnP.PowerShell.Commands.PowerPlatform.PowerAutomate
             if (Guid.TryParse(User, out Guid identityGuid))
             {
                 WriteVerbose("Looking up user through Microsoft Graph by user id {identityGuid}");
-                user = Utilities.AzureAdUtility.GetUser(graphAccessToken, identityGuid);
+                user = Utilities.AzureAdUtility.GetUser(graphAccessToken, identityGuid, azureEnvironment: Connection.AzureEnvironment);
             }
             else
             {
                 WriteVerbose($"Looking up user through Microsoft Graph by user principal name {User}");
-                user = Utilities.AzureAdUtility.GetUser(graphAccessToken, WebUtility.UrlEncode(User));
+                user = Utilities.AzureAdUtility.GetUser(graphAccessToken, User, azureEnvironment: Connection.AzureEnvironment);
             }
 
             if (user == null)
