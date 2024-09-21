@@ -41,6 +41,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azurecloudshell.md",
       "output": {
@@ -102,20 +105,30 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/connecting.md",
+      "source_relative_path": "articles/credentialmanagement.md",
       "output": {
         ".html": {
-          "relative_path": "articles/connecting.html"
+          "relative_path": "articles/credentialmanagement.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/credentialmanagement.md",
+      "source_relative_path": "articles/defaultclientid.md",
       "output": {
         ".html": {
-          "relative_path": "articles/credentialmanagement.html"
+          "relative_path": "articles/defaultclientid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/determinepermissions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/determinepermissions.html"
         }
       },
       "version": ""
@@ -152,6 +165,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/handlingmultitenantauth.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/handlingmultitenantauth.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/index.md",
       "output": {
         ".html": {
@@ -172,10 +195,33 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/microsoftsearch.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/microsoftsearch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/powershellpredictor.md",
       "output": {
         ".html": {
           "relative_path": "articles/powershellpredictor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/registerapplication.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/registerapplication.html"
         }
       },
       "version": ""
@@ -201,6 +247,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
@@ -586,6 +635,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPGroupMember.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPHomeSite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPHomeSite.html"
         }
       },
       "version": ""
@@ -1066,6 +1125,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPTenantCdnOrigin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPTenantRestrictedSearchAllowedList.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPTenantRestrictedSearchAllowedList.html"
         }
       },
       "version": ""
@@ -1572,6 +1641,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Enable-PnPPriviledgedIdentityManagement.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Enable-PnPPriviledgedIdentityManagement.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Enable-PnPSiteClassification.md",
       "output": {
         ".html": {
@@ -2032,6 +2111,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPContainerType.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPContainerType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPContainerTypeConfiguration.md",
       "output": {
         ".html": {
@@ -2342,10 +2431,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPFileAnalyticsData.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPFileAnalyticsData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPFileInFolder.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPFileInFolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPFileSensitivityLabelInfo.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPFileSensitivityLabelInfo.html"
         }
       },
       "version": ""
@@ -2421,9 +2530,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPFolderItem.md",
       "output": {
@@ -2635,6 +2741,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPLibraryFileVersionBatchDeleteJobStatus.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPLibraryFileVersionBatchDeleteJobStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPLibraryFileVersionExpirationReportJobStatus.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPLibraryFileVersionExpirationReportJobStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPList.md",
       "output": {
         ".html": {
@@ -2729,6 +2855,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPListRecordDeclaration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPManagedAppId.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPManagedAppId.html"
         }
       },
       "version": ""
@@ -2915,6 +3051,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPageLikedByInformation.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPageLikedByInformation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPageSchedulingEnabled.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPageSchedulingEnabled.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPPlannerBucket.md",
       "output": {
         ".html": {
@@ -3045,6 +3201,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPriviledgedIdentityManagementEligibleAssignment.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPriviledgedIdentityManagementEligibleAssignment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPriviledgedIdentityManagementRole.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPriviledgedIdentityManagementRole.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPProperty.md",
       "output": {
         ".html": {
@@ -3094,9 +3270,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPRetentionLabel.md",
       "output": {
@@ -3132,6 +3305,26 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPSearchCrawlLog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSearchExternalConnection.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSearchExternalConnection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSearchExternalSchema.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSearchExternalSchema.html"
         }
       },
       "version": ""
@@ -3192,6 +3385,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPSite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSiteAnalyticsData.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSiteAnalyticsData.html"
         }
       },
       "version": ""
@@ -3298,6 +3501,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSiteFileVersionBatchDeleteJobStatus.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSiteFileVersionBatchDeleteJobStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSiteFileVersionExpirationReportJobStatus.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSiteFileVersionExpirationReportJobStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPSiteGroup.md",
       "output": {
         ".html": {
@@ -3368,16 +3591,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPSiteSetVersionPolicyProgress.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPSiteSetVersionPolicyProgress.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPSiteTemplate.md",
       "output": {
         ".html": {
@@ -3402,6 +3615,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPSiteVersionPolicy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSiteVersionPolicyStatus.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSiteVersionPolicyStatus.html"
         }
       },
       "version": ""
@@ -3718,10 +3941,50 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantInternalSetting.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantInternalSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPTenantRecycleBinItem.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPTenantRecycleBinItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantRestrictedSearchAllowedList.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantRestrictedSearchAllowedList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantRestrictedSearchMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantRestrictedSearchMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTenantRetentionLabel.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTenantRetentionLabel.html"
         }
       },
       "version": ""
@@ -4002,6 +4265,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPWebPartXml.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPWebPermission.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPWebPermission.html"
         }
       },
       "version": ""
@@ -4408,6 +4681,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/New-PnPContainerType.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/New-PnPContainerType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/New-PnPEntraIDGroup.md",
       "output": {
         ".html": {
@@ -4452,6 +4735,26 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/New-PnPGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/New-PnPLibraryFileVersionBatchDeleteJob.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/New-PnPLibraryFileVersionBatchDeleteJob.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/New-PnPLibraryFileVersionExpirationReportJob.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/New-PnPLibraryFileVersionExpirationReportJob.html"
         }
       },
       "version": ""
@@ -4518,6 +4821,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/New-PnPSearchExternalConnection.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/New-PnPSearchExternalConnection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/New-PnPSite.md",
       "output": {
         ".html": {
@@ -4532,6 +4845,26 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/New-PnPSiteCollectionTermStore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/New-PnPSiteFileVersionBatchDeleteJob.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/New-PnPSiteFileVersionBatchDeleteJob.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/New-PnPSiteFileVersionExpirationReportJob.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/New-PnPSiteFileVersionExpirationReportJob.html"
         }
       },
       "version": ""
@@ -4828,6 +5161,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Register-PnPEntraIDAppForInteractiveLogin.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Register-PnPEntraIDAppForInteractiveLogin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Register-PnPHubSite.md",
       "output": {
         ".html": {
@@ -4948,6 +5291,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPAzureADUser.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPAzureADUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPClientSidePage.md",
       "output": {
         ".html": {
@@ -4962,6 +5315,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPContainerType.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPContainerType.html"
         }
       },
       "version": ""
@@ -5067,9 +5430,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPEntraIDUser.md",
       "output": {
@@ -5291,6 +5651,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPLibraryFileVersionBatchDeleteJob.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPLibraryFileVersionBatchDeleteJob.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPList.md",
       "output": {
         ".html": {
@@ -5345,6 +5715,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPListItemVersion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPManagedAppId.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPManagedAppId.html"
         }
       },
       "version": ""
@@ -5551,6 +5931,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPSearchExternalConnection.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPSearchExternalConnection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPSiteClassitication.md",
       "output": {
         ".html": {
@@ -5605,6 +5995,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPSiteDesignTask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPSiteFileVersionBatchDeleteJob.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPSiteFileVersionBatchDeleteJob.html"
         }
       },
       "version": ""
@@ -6001,6 +6401,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Reset-PnPDocumentId.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Reset-PnPDocumentId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Reset-PnPFileVersion.md",
       "output": {
         ".html": {
@@ -6010,9 +6420,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Reset-PnPLabel.md",
       "output": {
@@ -6028,6 +6435,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Reset-PnPMicrosoft365GroupExpiration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Reset-PnPRetentionLabel.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Reset-PnPRetentionLabel.html"
         }
       },
       "version": ""
@@ -6058,6 +6475,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Restart-PnPFlowRun.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Restore-PnPDeletedContainer.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Restore-PnPDeletedContainer.html"
         }
       },
       "version": ""
@@ -6583,9 +7010,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPLabel.md",
       "output": {
@@ -6661,6 +7085,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPListRecordDeclaration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPManagedAppId.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPManagedAppId.html"
         }
       },
       "version": ""
@@ -6767,6 +7201,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPOrgAssetsLibrary.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPOrgAssetsLibrary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPPage.md",
       "output": {
         ".html": {
@@ -6847,6 +7291,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPPowerAppByPassConsent.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPPowerAppByPassConsent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPPropertyBagValue.md",
       "output": {
         ".html": {
@@ -6861,6 +7315,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPRequestAccessEmails.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPRetentionLabel.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPRetentionLabel.html"
         }
       },
       "version": ""
@@ -6887,10 +7351,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPSearchExternalConnection.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPSearchExternalConnection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPSearchExternalItem.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPSearchExternalItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPSearchExternalSchema.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPSearchExternalSchema.html"
         }
       },
       "version": ""
@@ -6911,6 +7395,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPSite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPSiteArchiveState.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPSiteArchiveState.html"
         }
       },
       "version": ""
@@ -7001,6 +7495,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPSiteTemplateMetadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPSiteVersionPolicy.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPSiteVersionPolicy.html"
         }
       },
       "version": ""
@@ -7171,6 +7675,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPTenantCdnPolicy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPTenantRestrictedSearchMode.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPTenantRestrictedSearchMode.html"
         }
       },
       "version": ""
@@ -7471,6 +7985,16 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Uninstall-PnPApp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Unlock-PnPSensitivityLabelEncryptedFile.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Unlock-PnPSensitivityLabelEncryptedFile.html"
         }
       },
       "version": ""
@@ -8147,6 +8671,86 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/configuration/README.md",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/README.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/configuration/configuration_defaultclientid_linux_bashrc.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/configuration_defaultclientid_linux_bashrc.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_environmentvariables.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_environmentvariables.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system_advancedsettings.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system_advancedsettings.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system_advancedsettings_envvariables.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system_advancedsettings_envvariables.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system_advancedsettings_envvariables_addentry.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/configuration_defaultclientid_windowsmenu_system_advancedsettings_envvariables_addentry.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/configuration/connecting_verbose_clientid.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/configuration/connecting_verbose_clientid.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/contributing/commitsahead.png",
       "output": {
         "resource": {
@@ -8667,6 +9271,66 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/determinepermissions/README.md",
+      "output": {
+        "resource": {
+          "relative_path": "images/determinepermissions/README.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/determinepermissions/entraid_permissions_accessdenied_verbose.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/determinepermissions/entraid_permissions_accessdenied_verbose.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/determinepermissions/entraid_permissions_apponly_minimal.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/determinepermissions/entraid_permissions_apponly_minimal.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/determinepermissions/entraid_permissions_delegate_enterprisepermissionadded.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/determinepermissions/entraid_permissions_delegate_enterprisepermissionadded.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/determinepermissions/entraid_permissions_delegate_minimal.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/determinepermissions/entraid_permissions_delegate_minimal.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/determinepermissions/entraid_permissions_delegate_requestadditionalpermissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/determinepermissions/entraid_permissions_delegate_requestadditionalpermissions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/dev-containers/VScorner.png",
       "output": {
         "resource": {
@@ -8731,6 +9395,516 @@
       "output": {
         "resource": {
           "relative_path": "images/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/README.md",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/README.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/additem_done.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/additem_done.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/all_vertical_include_link.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/all_vertical_include_link.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/all_vertical_include_link_confirm.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/all_vertical_include_link_confirm.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/connect_interactively.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/connect_interactively.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/create_externalconnection.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/create_externalconnection.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/create_externalconnection_created.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/create_externalconnection_created.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/endresult_all.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/endresult_all.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/endresult_copilot.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/endresult_copilot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/endresult_vertical.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/endresult_vertical.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_add.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_add.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_complete.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_complete.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_contentsource.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_contentsource.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_designlayout.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_designlayout.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_done.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_done.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_name.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_name.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_picktemplate.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_picktemplate.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_rules.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_rules.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_templateproperties.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_templateproperties.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_templatepropertiesmapped.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_templatepropertiesmapped.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/resulttype_templatepropertiesmapped_paste.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/resulttype_templatepropertiesmapped_paste.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/schema_ready.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/schema_ready.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_add.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_add.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_connectors.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_connectors.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_connectors_add_vertical.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_connectors_add_vertical.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_connectors_addquery.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_connectors_addquery.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_connectors_filters.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_connectors_filters.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_connectors_select.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_connectors_select.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_enable.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_enable.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_name.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_name.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoftsearch/vertical_validation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoftsearch/vertical_validation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/README.md",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/README.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_navigate_to_app_registrations.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_navigate_to_app_registrations.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_grant_admin_consent.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_grant_admin_consent.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_grant_admin_consent_remove_other.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_grant_admin_consent_remove_other.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_sharepoint.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_sharepoint.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_sharepoint_delegated.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_sharepoint_delegated.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_sharepoint_delegated_allsites_read.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_addpermission_sharepoint_delegated_allsites_read.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_minimal.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_minimal.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_apipermissions_removedefault.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_apipermissions_removedefault.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_desktop.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_desktop.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_desktop_redirecturis.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_desktop_redirecturis.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_web.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_web.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_web_enterurl.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_authentication_add_platform_web_enterurl.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_authentication_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_authentication_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_clientid.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_clientid.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_registration.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_registration.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/registerapplication/entraid_new_app_registration_enter_name.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/registerapplication/entraid_new_app_registration_enter_name.png"
         }
       },
       "version": ""

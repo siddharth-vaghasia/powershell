@@ -88,10 +88,9 @@
 <ul>
 <li>SharePoint: Access to the SharePoint Tenant Administration site</li>
 </ul>
-<p>Adds a given document library as a organizational asset source</p>
+<p>Adds a given document library as an organizational asset source</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Add-PnPOrgAssetsLibrary -LibraryUrl &lt;String&gt; [-ThumbnailUrl &lt;String&gt;] [-CdnType &lt;SPOTenantCdnType&gt;] [-OrgAssetType &lt;OrgAssetType&gt;]
- [-Connection &lt;PnPConnection&gt;] 
+<pre><code class="lang-powershell">Add-PnPOrgAssetsLibrary -LibraryUrl &lt;String&gt; [-ThumbnailUrl &lt;String&gt;] [-CdnType &lt;SPOTenantCdnType&gt;] [-OrgAssetType &lt;OrgAssetType&gt;] [-DefaultOriginAdded &lt;bool&gt;] [-IsCopilotSearchable &lt;bool&gt;] [-Connection &lt;PnPConnection&gt;] 
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
 <p>Adds a given document library as an organizational asset source in your SharePoint Online Tenant. You can specify multiple libraries, but all organizational asset sources you add must reside in the same site collection.</p>
@@ -133,6 +132,28 @@ Parameter Sets: (All)
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-defaultoriginadded">-DefaultOriginAdded</h3>
+<p>Indicates that if the OFfice 365 CDN would not be enabled yet for the tenant, that it should be enabled and <a href="https://learn.microsoft.com/microsoft-365/enterprise/use-microsoft-365-cdn-with-spo?view=o365-worldwide#default-cdn-origins">the default origins</a> should be added to the tenant. This is only applicable when the CDN has not been enabled yet on the tenant.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-iscopilotsearchable">-IsCopilotSearchable</h3>
+<p>Indicates that the organizational assets library should be searchable in the CoPilot search experience in Office applications to locate corporate images. Only works when the OrgAssetType is set to ImageDocumentLibrary.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>

@@ -107,6 +107,12 @@
  [-BlockDownloadPolicy &lt;Boolean&gt;] [-ExcludeBlockDownloadPolicySiteOwners &lt;Boolean&gt;]
  [-ExcludedBlockDownloadGroupIds &lt;Guid[]&gt;]
  [-ListsShowHeaderAndNavigation &lt;Boolean&gt;]
+ [-DefaultLinkToExistingAccessReset &lt;SwitchParameter&gt;] [-DefaultShareLinkRole &lt;Role&gt;]
+ [-DefaultShareLinkScope &lt;SharingScope&gt;] [-LoopDefaultSharingLinkRole &lt;Role&gt;]
+ [-LoopDefaultSharingLinkScope &lt;SharingScope&gt;] [-RestrictContentOrgWideSearch &lt;Boolean&gt;] [-ReadOnlyForUnmanagedDevices &lt;Boolean&gt;]
+ [-RequestFilesLinkExpirationInDays &lt;Int32&gt;] [-RequestFilesLinkEnabled &lt;Boolean&gt;] [-OverrideSharingCapability &lt;Boolean&gt;]
+ [-RestrictedAccessControl &lt;Boolean&gt;] [-ClearRestrictedAccessControl &lt;SwitchParameter&gt;] [-RestrictedAccessControlGroups &lt;Guid[]&gt;]
+ [-AddRestrictedAccessControlGroups &lt;Guid[]&gt;] [-RemoveRestrictedAccessControlGroups &lt;Guid[]&gt;][-InheritVersionPolicyFromTenant &lt;SwitchParameter&gt;]
  [-Wait] 
  [-Connection &lt;PnPConnection&gt;] 
 </code></pre>
@@ -703,6 +709,131 @@ Accept wildcard characters: False
 <h3 id="-restrictedaccesscontrolgroups">-RestrictedAccessControlGroups</h3>
 <p>To edit a restricted access control group for a non-group site</p>
 <pre><code class="lang-yaml">Type: GUID []
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-defaultlinktoexistingaccessreset">-DefaultLinkToExistingAccessReset</h3>
+<p>To reset the default link to existing access configuration for a site.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-defaultsharelinkrole">-DefaultShareLinkRole</h3>
+<p>To set the default share link role. Available values are <code>None</code>, <code>Edit</code>, <code>Review</code>, <code>RestrictedView</code> and <code>View</code>.</p>
+<pre><code class="lang-yaml">Type: Role
+Parameter Sets: Set Properties
+Accepted values: None, Edit, Review, RestrictedView, View
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-defaultsharelinkscope">-DefaultShareLinkScope</h3>
+<p>To set the default sharing link scope. Available values are <code>Anyone</code>, <code>Organization</code>, <code>SpecificPeople</code>, <code>Uninitialized</code>.</p>
+<pre><code class="lang-yaml">Type: SharingScope
+Parameter Sets: Set Properties
+Accepted values: Anyone, Organization, SpecificPeople, Uninitialized
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-loopdefaultsharinglinkrole">-LoopDefaultSharingLinkRole</h3>
+<p>To set the loop default sharing link role. Available values are <code>None</code>, <code>Edit</code>, <code>Review</code>, <code>RestrictedView</code> and <code>View</code>.</p>
+<pre><code class="lang-yaml">Type: Role
+Parameter Sets: Set Properties
+Accepted values: None, Edit, Review, RestrictedView, View
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-loopdefaultsharinglinkscope">-LoopDefaultSharingLinkScope</h3>
+<p>To set the loop default sharing link scope. Available values are Anyone, Organization, SpecificPeople, Uninitialized.</p>
+<pre><code class="lang-yaml">Type: SharingScope
+Parameter Sets: Set Properties
+Accepted values: Anyone, Organization, SpecificPeople, Uninitialized
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-restrictcontentorgwidesearch">-RestrictContentOrgWideSearch</h3>
+<p>To restrict content from being searchable organization-wide and Copilot.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-readonlyforunmanageddevices">-ReadOnlyForUnmanagedDevices</h3>
+<p>To set the site as read-only for unmanaged devices.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-inheritversionpolicyfromtenant">-InheritVersionPolicyFromTenant</h3>
+<p>Clears the file version setting at site level.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-requestfileslinkexpirationindays">-RequestFilesLinkExpirationInDays</h3>
+<p>Specifies the number of days after which the request files link will expire.
+The value can be from 0 to 730 days.</p>
+<pre><code class="lang-yaml">Type: Int32
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-overridesharingcapability">-OverrideSharingCapability</h3>
+<p>Specifies whether to override the sharing capability for the site.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-requestfileslinkenabled">-RequestFilesLinkEnabled</h3>
+<p>Enables or disables the Request Files link on the site.</p>
+<pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: Set Properties
 
 Required: False

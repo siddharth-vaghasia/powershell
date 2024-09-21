@@ -84,22 +84,32 @@
   <h1 id="set-pnpstructuralnavigationcachewebstate">Set-PnPStructuralNavigationCacheWebState</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>Enable or disable caching for all webs in a site collection.</p>
+<p>Enable or disable caching for a web.</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Set-PnPStructuralNavigationCacheWebState -IsEnabled &lt;Boolean&gt; [-WebUrl &lt;String&gt;]
+<pre><code class="lang-powershell">Set-PnPStructuralNavigationCacheWebState -IsEnabled &lt;Boolean&gt; [-WebUrl &lt;String&gt;] [-Connection &lt;PnPConnection&gt;] 
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>The Set-PnPStructuralNavigationCacheWebState cmdlet can be used to enable or disable caching for a webs in a site collection. If the WebUrl parameter has not been specified the currently connected to site will be used.</p>
+<p>The Set-PnPStructuralNavigationCacheWebState cmdlet can be used to enable or disable caching for a web. If the WebUrl parameter has not been specified the currently connected to web will be used.</p>
 <h2 id="examples">EXAMPLES</h2>
-<h3 id="example-1">Example 1</h3>
+<h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Set-PnPStructuralNavigationCacheWebState -IsEnabled $true -WebUrl &quot;https://contoso.sharepoint.com/sites/product/electronics&quot; 
 </code></pre>
 <p>This example enables caching for the web <a href="https://contoso.sharepoint.com/sites/product/electronics">https://contoso.sharepoint.com/sites/product/electronics</a>.</p>
-<h3 id="example-2">Example 2</h3>
+<h3 id="example-2">EXAMPLE 2</h3>
 <pre><code class="lang-powershell">Set-PnPStructuralNavigationCacheWebState -IsEnabled $false -WebUrl &quot;https://contoso.sharepoint.com/sites/product/electronics&quot; 
 </code></pre>
 <p>This example disables caching for the web <a href="https://contoso.sharepoint.com/sites/product/electronics">https://contoso.sharepoint.com/sites/product/electronics</a>.</p>
 <h2 id="parameters">PARAMETERS</h2>
+<h3 id="-connection">-Connection</h3>
+<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
+<pre><code class="lang-yaml">Type: PnPConnection
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-isenabled">-IsEnabled</h3>
 <p>$true to enable caching, $false to disable caching.</p>
 <pre><code class="lang-yaml">Type: Boolean
